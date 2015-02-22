@@ -1,0 +1,10 @@
+{% extends 'Blog/base.html' %}
+{% block content %}
+    <p>{{ post.datetime }}</p>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content|linebreaks }}</p>
+    <p>
+    {% load disqus_tags %}
+    {% disqus_show_comments %}
+    </p>
+{% endblock %}
